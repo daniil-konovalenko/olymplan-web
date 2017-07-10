@@ -1,0 +1,23 @@
+{
+  "name": "olymplan-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olymplan/olymplan-web.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/olymplan/olymplan-web/issues"
+  },
+  "homepage": "https://github.com/olymplan/olymplan-web#readme",
+  "dependencies": {
+    "ejs-mate": "^2.3.0",
+    "express": "^4.15.3"
+  }
+}
