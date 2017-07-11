@@ -1,16 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Exo+2|PT+Sans");
 body {
-  font: "PT Sans", sans-serif; }
+  font-family: PT Sans, sans-serif; }
 
 h1 {
-  font: "Exo 2", sans-serif;
-  font-size: 22pt; }
-
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
-
-a {
-  color: #00B7FF; }
+  font-family: Exo 2, sans-serif;
+  font-size: 22px; }
 
 /*# sourceMappingURL=style.css.map */
