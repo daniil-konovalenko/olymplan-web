@@ -1,4 +1,5 @@
-# olymplan-web  
+# olymplan-web
+[![Build Status](https://travis-ci.org/olymplan/olymplan-web.svg?branch=master)](https://travis-ci.org/olymplan/olymplan-web)
 
 `$ npm install` после клонирования  
 `$ npm start` чтобы запустить просто так  
