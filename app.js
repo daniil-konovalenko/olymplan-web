@@ -7,7 +7,14 @@ var bodyParser = require('body-parser');
 var sassMiddleware = require('node-sass-middleware');
 
 var index = require('./routes/index');
-var users = require('./routes/users');
+var uni = require('./routes/uni');
+/*
+var contest = require('./routes/contest');
+var user = require('./routes/user');
+var api = require('./routes/api');
+var uitest = require('./routes/uitest');*/
+
+var adminMyAss = require('./routes/adminmyass');
 
 var app = express();
 
@@ -30,7 +37,13 @@ app.use(sassMiddleware({
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-app.use('/users', users);
+// app.use('/user', user);
+app.use('/uni', uni);
+/*
+app.use('/contest', contest);
+app.use('/api', api);
+app.use('adminmyass', adminMyAss);
+app.use('uitest', uitest);*/
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
