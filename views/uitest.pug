@@ -1,15 +1,5 @@
 extends layout
 
-block navbar
-    div(class="navbar__wrapper")
-        a(class="navbar__logo", href="/") Olymplan
-        a(class="navbar__link", href="/uni") Университеты
-        a(class="navbar__link", href="/contest") Олимпиады
-        if isUserLoggedIn
-            a(class="navbar__userlink", href="/user") lole
-        else
-            a(class="navbar__userlink", href="/user") Войти
-
 block content    
     h1 Заголовок первого уровня
     h2 Заголовок второго уровня
