@@ -2,12 +2,18 @@ version: '2.1'
 
 services:
   web:
-    restart: always
-    build: .  
+    extends:
+      file: common.yml
+      service: web
+
     environment:
-      - NODE_ENV=production
+      - NODE_ENV=development
     expose:
       - "80"
+      - "56745"
     command: npm start
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
     ports:
-      - "80:3000"
+      - "56745:56745"
