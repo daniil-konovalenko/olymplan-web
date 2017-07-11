@@ -11,8 +11,8 @@ var uni = require('./routes/uni');
 var contest = require('./routes/contest');
 var api = require('./routes/api');
 var user = require('./routes/user');
-// var uitest = require('./routes/uitest');
 
+var uitest = require('./routes/uitest');
 var adminMyAss = require('./routes/adminmyass');
 
 var app = express();
@@ -41,8 +41,8 @@ app.use('/uni', uni);
 app.use('/contest', contest);
 app.use('/api', api);
 
-app.use('adminmyass', adminMyAss);
-app.use('uitest', uitest);
+app.use('/adminmyass', adminMyAss);
+app.use('/uitest', uitest);
 
 
 // catch 404 and forward to error handler
