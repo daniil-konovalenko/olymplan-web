@@ -1,0 +1,10 @@
+version: '2.1'
+
+services:
+  web:
+    restart: always
+    build: .
+    expose:
+      - "80"
+    ports:
+      - "80:3000"

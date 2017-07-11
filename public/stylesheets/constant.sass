@@ -1,0 +1,41 @@
+$font-h: 'Exo 2', sans-serif
+$font-main: PT Sans, sans-serif
+$main-border-color: #999971
+$infobox-color: #FFDC57
+$box-border-color: #318ECC
+$box-fill-color: #97BAFF
+$navbar-border: #999971
+$navbar-size: 50px
+
+body
+    @import url('https://fonts.googleapis.com/css?family=Exo+2|PT+Sans')
+    padding-top: $navbar-size
+    font-family: $font-main
+    margin: 0
+    color: #2b2b2b
+
+    h1
+        font-family: $font-h
+        font-size: 28px
+
+    h2
+        font-family: $font-h
+        font-size: 24px
+
+    h3
+        font-family: $font-h
+        font-size: 20px
+
+    p
+        font-size: 16px
+
+    .button__empty
+        border: $box-border-color solid 3px
+        padding: 5px 15px 5px 15px
+        background-color: white
+
+    .button__empty:hover
+        background-color: #C7D3FF
+
+    .button__empty:active
+        background-color: #A1B6FF

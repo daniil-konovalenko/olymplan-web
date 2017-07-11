@@ -1,7 +1,24 @@
 doctype html
 html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+    head
+        title= title
+        link(rel='stylesheet', href='/stylesheets/style.css')
+    
+    body
+        block navbar
+            div(class="navbar__wrapper")
+                ul
+                    li
+                        a(class="navbar__logo", href="/") Olymplan
+                    li
+                        a(class="navbar__link", href="/uni") Университеты
+                    li
+                        a(class="navbar__link", href="/contest") Олимпиады
+                    if isUserLoggedIn
+                        li
+                            a(class="navbar__userlink", href="/user") lole
+                    else
+                        li
+                            a(class="navbar__userlink", href="/user") Войти
+
+        block content
