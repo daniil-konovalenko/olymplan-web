@@ -7,12 +7,18 @@ html
     body
         block navbar
             div(class="navbar__wrapper")
-                a(class="navbar__logo", href="/") Olymplan
-                a(class="navbar__link", href="/uni") Университеты
-                a(class="navbar__link", href="/contest") Олимпиады
-                if isUserLoggedIn
-                    a(class="navbar__userlink", href="/user") lole
-                else
-                    a(class="navbar__userlink", href="/user") Войти
+                ul
+                    li
+                        a(class="navbar__logo", href="/") Olymplan
+                    li
+                        a(class="navbar__link", href="/uni") Университеты
+                    li
+                        a(class="navbar__link", href="/contest") Олимпиады
+                    if isUserLoggedIn
+                        li
+                            a(class="navbar__userlink", href="/user") lole
+                    else
+                        li
+                            a(class="navbar__userlink", href="/user") Войти
 
         block content
