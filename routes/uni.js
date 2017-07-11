@@ -8,4 +8,7 @@ router.get('/', (req, res, next) => {
     res.send('uni yo!');
 });
 
+router.get('/:uni_short', (req, res, next) => {
+    res.send(req.params.uni_short);
+});
 module.exports = router;
