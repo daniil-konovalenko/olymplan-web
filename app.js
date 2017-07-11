@@ -40,9 +40,9 @@ app.use('/user', user);
 app.use('/uni', uni);
 app.use('/contest', contest);
 app.use('/api', api);
-/*
+
 app.use('adminmyass', adminMyAss);
-app.use('uitest', uitest);*/
+app.use('uitest', uitest);
 
 
 // catch 404 and forward to error handler
