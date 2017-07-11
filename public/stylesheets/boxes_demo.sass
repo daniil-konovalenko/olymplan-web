@@ -1,0 +1,33 @@
+@import constant
+
+$demobox__box__size: 200px
+
+.demobox__wrapper
+    display: flex
+    flex-direction: row
+    justify-content: center
+    flex-wrap: nowrap
+
+.demobox__box
+    width: $demobox__box__size
+    height: $demobox__box__size
+
+.demobox__box__1
+    @extend .demobox__box
+    background-color: $main-border-color
+
+.demobox__box__2
+    @extend .demobox__box
+    background-color: $infobox-color
+
+.demobox__box__3
+    @extend .demobox__box
+    background-color: $box-border-color
+
+.demobox__box__4
+    @extend .demobox__box
+    background-color: $box-fill-color
+
+//.demobox__box__5
+    @extend .demobox__box
+    background-color: $navbar-border-color
