@@ -1,6 +1,8 @@
 extends layout
 
 block content    
+    link(rel='stylesheet',href="/stylesheets/boxes_demo.css")
+    
     h1 Заголовок первого уровня
     h2 Заголовок второго уровня
     h3 Заголовок третьего уровня
@@ -24,7 +26,15 @@ block content
         | видения один брокер с Лондонской биржи: «Мир — это место, где бизнес
         | встречает деньги».
     
-    button Нажмакай меня
+    button(class="button__empty") Нажмакай меня
+    button(class="button__filled") Нажмакай меня    
     
     div(class="message_box")
         p LOL
+    
+    div(class="demobox_wrapper")
+        div(class="demobox__box__1")
+        div(class="demobox__box__2")
+        div(class="demobox__box__3")
+        div(class="demobox__box__4")
+        div(class="demobox__box__5")
