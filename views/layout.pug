@@ -10,17 +10,17 @@ html
         block navbar
             div(class="navbar__wrapper")
                 ul(class='pure-g')
-                    li(class='pure-u-lg-1-4')
-                        img(class="navbar__logo",src="/img/olymplan-logo-1-6-1.svg")
-                    li(class='pure-u-lg-1-4')
-                        a(class="navbar__link_uni", href="/uni") Университеты
-                    li(class='pure-u-lg-1-4')
-                        a(class="navbar__link_cont", href="/contest") Олимпиады
+                    li(class='navbar__logo pure-u-lg-1-4')
+                        img(src="/img/logo-1.svg")
+                    li(class='navbar__link_uni pure-u-lg-1-4')
+                        a(href="/uni") Университеты ⚲
+                    li(class='navbar__link_cont pure-u-lg-1-4')
+                        a(href="/contest") Олимпиады ⚲
                     if isUserLoggedIn
-                        li(class='pure-u-lg-1-4')
-                            a(class="navbar__userlink", href="/user") lole
+                        li(class='navbar__userlink pure-u-lg-1-4')
+                            a(href="/user") lole
                     else
-                        li(class='pure-u-lg-1-4')
-                            a(class="navbar__userlink", href="/user") Войти
+                        li(class='navbar__userlink pure-u-lg-1-4')
+                            a(href="/user") Войти
 
         block content

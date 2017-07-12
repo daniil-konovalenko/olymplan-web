@@ -2,13 +2,13 @@
 
 .navbar__wrapper
     border-bottom: $navbar-border solid 3px
-    display: flex
     text-align: center
     height: $navbar-size
     width: 100%
     top: 0
     position: fixed
     z-index: 9999
+    background-color: white
 
     a
         text-decoration: none
@@ -22,26 +22,33 @@
         flex-direction: row
         justify-content: space-around
         position: relative
-        margin: 0
 
         li
             display: inline-table
-            padding: 15px
-            margin-left: 0
             font-family: $font-h
 
 
     .navbar__logo
         float: left
         height: $navbar-size
-        width: $navbar-size / 21 * 29
+        width: $navbar-size / 15 * 30
+        padding-right: 10em
 
     .navbar__link_uni
+        float: none
         text-align: center
+        padding-top: 1em
+        padding-bottom: 1em
 
     .navbar__link_cont
+        float: none
         text-align: center
+        padding-top: 1em
+        padding-bottom: 1em
 
     .navbar__userlink
         float: right
-        text-align: center
+        text-align: right
+        padding-right: 1em
+        padding-top: 1em
+        padding-bottom: 1em
