@@ -3,23 +3,24 @@ html
     head
         title= title
         link(rel='stylesheet', href='/stylesheets/style.css')
-        link(rel='stylesheet', href='//unpkg.com/purecss@1.0.0/build/pure-min.css')
+        //link(rel='stylesheet', href='//unpkg.com/purecss@1.0.0/build/pure-min.css')
+        link(rel='stylesheet', href='https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css')
     
     body
         block navbar
-            div(class="navbar__wrapper")
+            div(class="navbar__wrapper pure-g")
                 ul
                     li
-                        img(class="navbar__logo",href="/public/img/olymplan-logo-1-6-1.svg")
+                        img(class="navbar__logo pure-u-lg-1-4",href="/public/img/olymplan-logo-1-6-1.svg")
                     li
-                        a(class="navbar__link_uni", href="/uni") Университеты
+                        a(class="navbar__link_uni  pure-u-lg-1-4", href="/uni") Университеты
                     li
-                        a(class="navbar__link_cont", href="/contest") Олимпиады
+                        a(class="navbar__link_cont  pure-u-lg-1-4", href="/contest") Олимпиады
                     if isUserLoggedIn
                         li
-                            a(class="navbar__userlink", href="/user") lole
+                            a(class="navbar__userlink  pure-u-lg-1-4", href="/user") lole
                     else
                         li
-                            a(class="navbar__userlink", href="/user") Войти
+                            a(class="navbar__userlink  pure-u-lg-1-4", href="/user") Войти
 
         block content
