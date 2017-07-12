@@ -9,13 +9,24 @@ module.exports = {
         type: Sequelize.INTEGER,
       },
       name: {
+        allowNull: false,
         type: Sequelize.STRING,
       },
       level: {
+        allowNull: false,
         type: Sequelize.INTEGER,
       },
       subject: {
+        allowNull: false,
         type: Sequelize.STRING,
+      },
+      grades: {
+        allowNull: false,
+        type: Sequelize.ARRAY(Sequelize.INTEGER),
+      },
+      year: {
+        allowNull: false,
+        type: Sequelize.INTEGER,
       },
       createdAt: {
         allowNull: false,
