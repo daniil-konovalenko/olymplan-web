@@ -1,0 +1,22 @@
+extends layout
+
+block content
+
+    table
+        tr
+            th Name
+            th Level
+            th Subject
+            th USE
+            th bonus
+            th grades
+            th stages
+        each record in data.contests
+            tr
+                td= record.Name
+                td= record.Level
+                td= record.Subject
+                td= record.USE
+                td= record.grades
+                td= record.grades
+                td= record.stages
