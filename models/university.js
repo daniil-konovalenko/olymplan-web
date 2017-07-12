@@ -2,8 +2,7 @@
 module.exports = function(sequelize, DataTypes) {
 	var University = sequelize.define('University', {
 		name: DataTypes.STRING,
-        isSaraga: DataTypes.BULEAN,
-        faculties: DataTypes.ARRAY,
+        isSaraga: DataTypes.BOOLEAN,
         description: DataTypes.STRING,
 	}, {
 		classMethods: {

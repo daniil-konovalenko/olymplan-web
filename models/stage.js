@@ -1,5 +1,5 @@
 'use strict';
-var Contest = require('./contest');
+var contest = require('./contest');
 
 module.exports = function(sequelize, DataTypes) {
     var Stage = sequelize.define('Stage', {
@@ -18,9 +18,14 @@ module.exports = function(sequelize, DataTypes) {
         }
     });
     Stage.hasMany(Stage, {as: 'requiredStages'});
+    var Contest = contest(sequelize, DataTypes);
     Stage.belongsToMany(Contest, {
       through: 'ContestStages',
       as: 'stages',
+    });
+    Contest.belongsToMany(Stage, {
+        through: 'ContestStages',
+        as: 'contests',
     });
     return Stage;
 };
