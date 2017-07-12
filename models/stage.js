@@ -9,7 +9,7 @@ module.exports = function(sequelize, DataTypes) {
         startTime: DataTypes.DATE,
         duration: DataTypes.TIME,
         deadline: DataTypes.DATE,
-        notes: DataTypes.TEXT
+        notes: DataTypes.TEXT,
 
     }, {
         classMethods: {
@@ -20,7 +20,7 @@ module.exports = function(sequelize, DataTypes) {
     Stage.hasMany(Stage, {as: 'requiredStages'});
     Stage.belongsToMany(Contest, {
       through: 'ContestStages',
-      as: 'contests'
+      as: 'stages',
     });
     return Stage;
 };
