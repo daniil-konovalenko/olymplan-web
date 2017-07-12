@@ -8,19 +8,19 @@ html
     
     body
         block navbar
-            div(class="navbar__wrapper pure-g")
-                ul
-                    li
-                        img(class="navbar__logo pure-u-lg-1-4",href="/public/img/olymplan-logo-1-6-1.svg")
-                    li
-                        a(class="navbar__link_uni  pure-u-lg-1-4", href="/uni") Университеты
-                    li
-                        a(class="navbar__link_cont  pure-u-lg-1-4", href="/contest") Олимпиады
+            div(class="navbar__wrapper")
+                ul(class='pure-g')
+                    li(class='pure-u-lg-1-4')
+                        img(class="navbar__logo",src="/img/olymplan-logo-1-6-1.svg")
+                    li(class='pure-u-lg-1-4')
+                        a(class="navbar__link_uni", href="/uni") Университеты
+                    li(class='pure-u-lg-1-4')
+                        a(class="navbar__link_cont", href="/contest") Олимпиады
                     if isUserLoggedIn
-                        li
-                            a(class="navbar__userlink  pure-u-lg-1-4", href="/user") lole
+                        li(class='pure-u-lg-1-4')
+                            a(class="navbar__userlink", href="/user") lole
                     else
-                        li
-                            a(class="navbar__userlink  pure-u-lg-1-4", href="/user") Войти
+                        li(class='pure-u-lg-1-4')
+                            a(class="navbar__userlink", href="/user") Войти
 
         block content
