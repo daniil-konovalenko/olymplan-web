@@ -12,7 +12,7 @@ exports.universityByName = async (req, res, next) => {
     res.render('uni_page', {title: uni.name, uni:uni});
 };
 
-exports.facultyByName = async (req, res,, next) => {
+exports.facultyByName = async (req, res, next) => {
     var fac = await models.Faculty.findOne({
         where: {name: req.params.fac},
     });
