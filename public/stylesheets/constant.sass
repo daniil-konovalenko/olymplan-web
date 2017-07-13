@@ -10,6 +10,7 @@ $button-empty-hover-color: #C7D3FF
 $button-empty-active-color: #A1B6FF
 $button-filled-hover-color: #7c97cc
 $button-filled-active-color: #667ba5
+$messagebox-color: #ff2b2b
 
 body
     @import url('https://fonts.googleapis.com/css?family=Exo+2|PT+Sans')
@@ -42,8 +43,15 @@ body
 
     .button__empty
         border: $box-border-color solid 2px
+        border-radius: 5px
         padding: 5px 15px 5px 15px
         background-color: white
+        font-size: 16px
+        font-family: $font-main
+        margin: 1em
+        color: #2b2b2b
+        cursor: pointer
+        font-weight: bold
 
     .button__empty:hover
         background-color: #C7D3FF
@@ -53,8 +61,15 @@ body
 
     .button__filled
         border: $box-border-color solid 2px
+        border-radius: 5px
         padding: 5px 15px 5px 15px
         background-color: $box-fill-color
+        font-size: 16px
+        font-family: $font-main
+        margin: 1em
+        color: #2b2b2b
+        cursor: pointer
+        font-weight: bold
 
     .button__filled:hover
         background-color: #7c97cc
@@ -64,6 +79,13 @@ body
 
     .infobox
         border: $infobox-color solid 2px
+        border-radius: 5px
+        padding: 0.5em 2em 0.5em 2em
+        font-weight: bold
+        text-align: center
+
+    .message_box
+        border: $messagebox-color solid 2px
         border-radius: 5px
         padding: 0.5em 2em 0.5em 2em
         font-weight: bold
