@@ -1,6 +1,7 @@
 var request = require('supertest');
 
 describe('loading express', function () {
+    this.timeout(3000);
     var app;
     beforeEach(async function () {
         app = require('../app');
