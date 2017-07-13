@@ -6,6 +6,7 @@ describe('loading express', function () {
         app = require('../app');
     });
 
+    //tests for all pages
     it('responds to /', function testRoot(done){
         request(app)
             .get('/')
@@ -46,6 +47,14 @@ describe('loading express', function () {
             .get('/uni/user')
             .expect(200, done);
     });
+
+    //test for static
+        it('responds to /stylesheets/style.css', function testRoot(done){
+        request(app)
+            .get('/stylesheets/style.css')
+            .expect(200, done);
+    });
+
     it('404 some random page', function testRandomPage(done){
         request(app)
             .get('/whatever')
