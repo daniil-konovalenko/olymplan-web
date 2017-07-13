@@ -4,11 +4,7 @@ var models = require('../models/index');
 var uniContoller = require('../controllers/universityController');
 
 
-router.get('/', (req, res, next) => {
-    res.send('uni')
-});
-
-router.get('/all', uniContoller.university_list);
+router.get('/', uniContoller.university_list);
 
 router.get('/:short', (req, res, next) => {
     res.send(req.params.short);
