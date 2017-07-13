@@ -1,0 +1,15 @@
+extends layout
+
+block content
+
+    table
+        tr
+            th Название
+            th Шарага?
+            th Описание
+
+        each record in unis
+            tr
+                td= record.name
+                td= record.isSaraga ? 'да' : 'нет'
+                td= record.description
