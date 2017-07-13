@@ -1,15 +1,14 @@
 doctype html
 html
-    head
-        title= title
-        link(rel='stylesheet', href='https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css')
-        link(rel='stylesheet', href='/stylesheets/style.css')
+    
+    include ./head.pug
     
     body
         div(class="navbar__wrapper")
             ul(class='pure-g')
                 li(class='navbar__logo pure-u-lg-1-4')
-                    img(src="/img/logo-1.svg")
+                    a(href="/")
+                        img(src="/img/logo-1-1.svg")
                 li(class='navbar__link_uni pure-u-lg-1-4')
                     a(href="/uni") Университеты ⌕
                 li(class='navbar__link_cont pure-u-lg-1-4')
@@ -19,6 +18,6 @@ html
                         a(href="/user") lole
                 else
                     li(class='navbar__userlink pure-u-lg-1-4')
-                        a(href="/user") Войти
+                        a(href="/user") Войти 🚪
         
         block content
