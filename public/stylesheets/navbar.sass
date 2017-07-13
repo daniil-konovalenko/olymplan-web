@@ -1,0 +1,54 @@
+@import constant
+
+.navbar__wrapper
+    border-bottom: $navbar-border solid 3px
+    text-align: center
+    height: $navbar-size
+    width: 100%
+    top: 0
+    position: fixed
+    z-index: 9999
+    background-color: white
+
+    a
+        text-decoration: none
+        color: BLACK
+        text-transform: none
+
+    a:hover
+        color: #2b2b2b
+
+    ul
+        flex-direction: row
+        justify-content: space-around
+        position: relative
+
+        li
+            display: inline-table
+            font-family: $font-h
+
+
+    .navbar__logo
+        float: left
+        height: $navbar-size
+        width: $navbar-size / 15 * 30
+        padding-right: 10em
+
+    .navbar__link_uni
+        float: none
+        text-align: center
+        padding-top: 1em
+        padding-bottom: 1em
+
+    .navbar__link_cont
+        float: none
+        text-align: center
+        padding-top: 1em
+        padding-bottom: 1em
+
+    .navbar__userlink
+        float: right
+        text-align: right
+        padding-right: 4em
+        padding-top: 1em
+        padding-bottom: 1em
