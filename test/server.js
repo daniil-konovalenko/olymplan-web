@@ -6,6 +6,10 @@ describe('loading express', function () {
         app = require('../app');
     });
 
+    //time for loading express
+    this.timeout(5000);
+
+    //tests all pages
     it('responds to /', function testRoot(done){
         request(app)
             .get('/')
@@ -46,6 +50,20 @@ describe('loading express', function () {
             .get('/uni/user')
             .expect(200, done);
     });
+
+    //tests static
+    it('responds to /stylesheets/style.css', function testRoot(done){
+        request(app)
+            .get('/stylesheets/style.css')
+            .expect(200, done);
+    });
+
+    it('responds to /stylesheets/boxes_demo.css', function testRoot(done){
+        request(app)
+            .get('/stylesheets/boxes_demo.css')
+            .expect(200, done);
+    });
+
     it('404 some random page', function testRandomPage(done){
         request(app)
             .get('/whatever')
