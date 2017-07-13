@@ -8,19 +8,24 @@ module.exports = {
                 primaryKey: true,
                 type: Sequelize.INTEGER,
             },
-            name: {
+            nameAbbreviationEng: {
+                allowNull: false,
+                type: Sequelize.STRING,
+            },
+            nameAbbreviationRus: {
+                allowNull: false,
+                type: Sequelize.STRING,
+            },
+            nameFull: {
                 allowNull: false,
                 type: Sequelize.STRING,
             },
             isSharaga: {
                 type: Sequelize.BULEAN,
             },
-            faculties: {
-                allowNull: false,
-                type: Sequelize.ARRAY.Sequelize.STRING,
-            },
             description: {
-                type: Sequelize.STRING,
+                allowNull: false,
+                type: Sequelize.TEXT,
             },
             createdAt: {
                 allowNull: false,

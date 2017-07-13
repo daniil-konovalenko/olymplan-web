@@ -1,0 +1,14 @@
+extends layout
+
+block content
+
+    table
+        tr
+            th Название
+            th Шарага?
+            th Описание
+
+        tr
+            td= uni.name
+            td= uni.isSaraga ? 'да' : 'нет'
+            td= uni.description

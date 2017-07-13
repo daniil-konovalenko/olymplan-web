@@ -1,4 +1,5 @@
 'use strict';
+
 var contest = require('./contest');
 
 module.exports = function(sequelize, DataTypes) {
