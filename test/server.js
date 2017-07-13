@@ -2,9 +2,11 @@ var request = require('supertest');
 
 describe('loading express', function () {
     var app;
-    beforeEach(async function () {
+    beforeEach(function () {
         app = require('../app');
     });
+
+    this.timeout(15000);
 
     //tests for all pages
     it('responds to /', function testRoot(done){
@@ -48,10 +50,34 @@ describe('loading express', function () {
             .expect(200, done);
     });
 
-    //test for static
-        it('responds to /stylesheets/style.css', function testRoot(done){
+    //tests for static
+    it('responds to /stylesheets/style.css', function testRoot(done){
         request(app)
             .get('/stylesheets/style.css')
+            .expect(200, done);
+    });
+
+    it('responds to /stylesheets/boxes_demo.sass', function testRoot(done){
+        request(app)
+            .get('/stylesheets/boxes_demo.sass')
+            .expect(200, done);
+    });
+
+    it('responds to /stylesheets/constant.sass', function testRoot(done){
+        request(app)
+            .get('/stylesheets/constant.sass')
+            .expect(200, done);
+    });
+
+    it('responds to /stylesheets/navbar.sass', function testRoot(done){
+        request(app)
+            .get('/stylesheets/navbar.sass')
+            .expect(200, done);
+    });
+
+    it('responds to /stylesheets/style.sass', function testRoot(done){
+        request(app)
+            .get('/stylesheets/style.sass')
             .expect(200, done);
     });
 
