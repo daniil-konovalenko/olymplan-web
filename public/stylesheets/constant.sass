@@ -8,6 +8,7 @@ $navbar-border: #999971
 $navbar-size: 50px
 $button-empty-hover-color: #C7D3FF
 $button-empty-active-color: #A1B6FF
+$button-active-border-color: #256d9c
 $button-filled-hover-color: #7c97cc
 $button-filled-active-color: #667ba5
 $messagebox-color: #ff2b2b
@@ -58,6 +59,7 @@ body
 
     .button__empty:active
         background-color: #A1B6FF
+        border: $button-active-border-color solid 2px
 
     .button__filled
         border: $box-border-color solid 2px
@@ -76,6 +78,7 @@ body
 
     .button__filled:active
         background-color: #667ba5
+        border: $button-active-border-color solid 2px
 
     .infobox
         border: $infobox-color solid 2px
@@ -90,3 +93,11 @@ body
         padding: 0.5em 2em 0.5em 2em
         font-weight: bold
         text-align: center
+
+    input[type=radio]
+        border: black solid 2px
+        color: black
+
+    input[type=radio]:checked
+        border: black solid 2px
+        color: black
