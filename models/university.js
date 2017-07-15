@@ -1,6 +1,5 @@
 'use strict';
 
-
 module.exports = function(sequelize, DataTypes) {
     var University = sequelize.define('University', {
         name_abbreviation_eng: DataTypes.STRING,
@@ -13,9 +12,9 @@ module.exports = function(sequelize, DataTypes) {
     }, {
         classMethods: {
             associate: function(models) {
-                University.hasMany(models.Faculty)
-            }
-        }
+                University.hasMany(models.Faculty);
+            },
+        },
     });
     return University;
 };
