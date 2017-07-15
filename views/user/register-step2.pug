@@ -1,0 +1,14 @@
+extends ../layout
+
+block custom_head
+    link(rel="stylesheet",href="stylesheets/register.css")
+
+block content
+    div(class="pure-u-lg-2-5")
+    div(class="pure-u-lg-1-5")
+        form(method="post",action="",class="register__form")
+            h1 Регистрация
+            input(type="text",placeholder="почта")
+            input(type="password",placeholder="пароль первый раз")
+            input(type="password",placeholder="пароль второй раз")
+            input(type="submit",class="button__filled",value="Зарегистрироваться")
