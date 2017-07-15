@@ -1,5 +1,20 @@
 extends admin_layout
 
 block content
-    h1 Брат братан братишка
-    p Когда меня отпустит
+    table
+        tr
+            each field in unis[0]
+                td= field
+        each record in unis
+            tr
+                each field in unis[0]
+                    td= record[field]
+    table
+        tr
+            each field in facs[0]
+                td= field
+        each record in facs
+            tr
+                each field in facs[0]
+                    td= record[field]
+                                    
