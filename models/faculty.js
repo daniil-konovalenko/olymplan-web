@@ -5,15 +5,12 @@ module.exports = function (sequelize, DataTypes) {
             name: DataTypes.STRING,
             external_url: DataTypes.STRING,
             description: DataTypes.TEXT,
-        },
-        {
+        }, {
             classMethods: {
                 associate: function (models) {
-                    Faculty.belongsTo(models.University)
+                    Faculty.belongsTo(models.University);
                 },
-            }
+            },
         });
-
-
     return Faculty;
 };

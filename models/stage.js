@@ -1,6 +1,5 @@
 'use strict';
 
-
 module.exports = function(sequelize, DataTypes) {
     var Stage = sequelize.define('Stage', {
         places: DataTypes.ARRAY(DataTypes.STRING),
@@ -18,9 +17,8 @@ module.exports = function(sequelize, DataTypes) {
                 Stage.belongsToMany(models.Contest, {
                     through: 'ContestStages',
                 });
-            }
-        }
+            },
+        },
     });
-
     return Stage;
 };
