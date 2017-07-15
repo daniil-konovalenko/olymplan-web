@@ -1,7 +1,9 @@
 doctype html
 html
     
-    include ./head.pug
+    head
+        include ./head.pug
+        block custom_head
     
     body
         div(class="navbar__wrapper")
