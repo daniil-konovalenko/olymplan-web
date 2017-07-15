@@ -1,0 +1,21 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ubuntu/olymplan-web
+permissions:
+  - object: /appspec_scripts
+    mode: 755
+    type:
+      - file
+hooks:
+  ApplicationStop:
+      - location: appspec_scripts/ApplicationStop.sh
+        runas: root
+        timeout: 300
+  AfterInstall:
+      - location: appspec_scripts/AfterInstall.sh
+        timeout: 300
+  ApplicationStart:
+      - location: appspec_scripts/ApplicationStart.sh
+        timeout: 1800

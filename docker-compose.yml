@@ -5,7 +5,6 @@ services:
     extends:
       file: common.yml
       service: web
-
     environment:
       - NODE_ENV=development
     expose:
