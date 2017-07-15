@@ -9,6 +9,12 @@
     position: fixed
     z-index: 9999
     background-color: white
+    display: flex
+    flex-direction: row
+    justify-content: space-around
+
+    //div:nth-of-type(odd)
+        background-color: #ccc
 
     a
         text-decoration: none
@@ -19,9 +25,11 @@
         color: #2b2b2b
 
     ul
-        flex-direction: row
-        justify-content: space-around
-        position: relative
+        display: block
+        padding: 0
+        //flex-direction: row
+        //justify-content: space-around
+        //position: relative
 
         li
             display: inline-table
@@ -32,23 +40,24 @@
         float: left
         height: $navbar-size
         width: $navbar-size / 15 * 30
-        padding-right: 10em
+        padding-left: 4em
+        //padding-right: 10em
 
     .navbar__link_uni
-        float: none
         text-align: center
         padding-top: 1em
         padding-bottom: 1em
 
     .navbar__link_cont
-        float: none
         text-align: center
         padding-top: 1em
         padding-bottom: 1em
 
     .navbar__userlink
-        float: right
         text-align: right
-        padding-right: 4em
-        padding-top: 1em
-        padding-bottom: 1em
+
+        a
+            display: inline-block
+            padding-right: 4em
+            padding-top: 1em
+            padding-bottom: 1em
