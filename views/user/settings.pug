@@ -1,4 +1,34 @@
 extends ../layout
 
 block content
-    h1 Привет, %username%!
+    div(class="pure-u-lg-1-4")
+    div(class="pure-u-lg-1-2")
+            
+        h1 Привет, %username%!
+        
+        table
+            tr
+                td Почта
+                td
+                    input(type='text')
+            tr
+                td Пароль
+                td 
+                    input(type='password')
+            tr
+                td Как к тебе обращаться
+                td
+                    input(type='text')
+            tr
+                td Ник в Телеграме
+                td
+                    input(type="tel")
+            tr
+                td Класс
+                td
+                    input(type="number")
+            tr
+                td Цвет (for testing purpose only)
+                td
+                    input(type="color")
+                
