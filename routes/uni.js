@@ -1,12 +1,12 @@
 var express = require('express');
 var router = express.Router();
+var models = require('../models/index');
+var uniContoller = require('../controllers/universityController');
 
-var uniShort = require('./uni_short');
+router.get('/', uniContoller.universityList);
 
-router.use('/', uniShort);
+router.get('/:short', uniContoller.universityByName);
 
-router.get('/', (req, res, next) => {
-    res.send('uni yo!');
-});
+router.get('/:short/:fac', uniContoller.facultyByName);
 
 module.exports = router;
