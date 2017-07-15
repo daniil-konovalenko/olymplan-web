@@ -13,7 +13,7 @@ module.exports = function(sequelize, DataTypes) {
     }, {
         classMethods: {
             associate: function(models) {
-                // associations can be defined here
+                University.hasMany(models.Faculty)
             }
         }
     });
