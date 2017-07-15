@@ -8,8 +8,13 @@ $navbar-border: #999971
 $navbar-size: 50px
 $button-empty-hover-color: #C7D3FF
 $button-empty-active-color: #A1B6FF
+$button-active-border-color: #256d9c
 $button-filled-hover-color: #7c97cc
 $button-filled-active-color: #667ba5
+$messagebox-color: #ff2b2b
+$input-text-bg-color: #e3e3e3
+$input-text-hover-color: #f0f0f0
+
 
 body
     @import url('https://fonts.googleapis.com/css?family=Exo+2|PT+Sans')
@@ -42,29 +47,76 @@ body
 
     .button__empty
         border: $box-border-color solid 2px
+        border-radius: 5px
         padding: 5px 15px 5px 15px
         background-color: white
+        font-size: 16px
+        font-family: $font-main
+        margin: 1em
+        color: #2b2b2b
+        cursor: pointer
+        font-weight: bold
 
     .button__empty:hover
         background-color: #C7D3FF
 
     .button__empty:active
         background-color: #A1B6FF
+        border: $button-active-border-color solid 2px
 
     .button__filled
         border: $box-border-color solid 2px
+        border-radius: 5px
         padding: 5px 15px 5px 15px
         background-color: $box-fill-color
+        font-size: 16px
+        font-family: $font-main
+        margin: 1em
+        color: #2b2b2b
+        cursor: pointer
+        font-weight: bold
 
     .button__filled:hover
         background-color: #7c97cc
 
     .button__filled:active
         background-color: #667ba5
+        border: $button-active-border-color solid 2px
 
     .infobox
-        border: $infobox-color solid 2px
+        border: white solid 2px
+        background-color: $infobox-color
         border-radius: 5px
         padding: 0.5em 2em 0.5em 2em
         font-weight: bold
         text-align: center
+
+    .message_box
+        border: $messagebox-color solid 2px
+        border-radius: 5px
+        padding: 0.5em 2em 0.5em 2em
+        font-weight: bold
+        text-align: center
+
+    .checkbox__label
+        padding: 3px
+
+
+    .radio__label
+        padding: 3px
+
+    input[type=text]
+        box-sizing: border-box
+        background-color: #e3e3e3
+        border: 2px solid white
+        border-radius: 5px
+        padding: 7px
+        margin: 0px
+        outline: none
+        font-size: 16px
+
+    input[type=text]:hover
+        background-color: #f0f0f0
+
+    input[type=text]:focus
+        background-color: white

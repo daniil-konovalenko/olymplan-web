@@ -5,3 +5,26 @@ node_js:
 cache:
   directories:
     - "node_modules"
+branches:
+    only:
+        - master
+        - dev
+deploy:
+    - provider: codedeploy
+      wait-until-deployed: true
+      access_key_id: $AWS_ACCESS_KEY
+      secret_access_key: $AWS_SECRET_KEY
+      application: olymplan
+      deployment_group: olymplan-dev
+      region: eu-central-1
+      on:
+        branch: dev
+    - provider: codedeploy
+      wait-until-deployed: true
+      access_key_id: AKIAJN6BTMHXBBRFD3ZA
+      secret_access_key: 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
+      application: olymplan
+      deployment_group: olymplan-prod
+      region: eu-central-1
+      on:
+        branch: master
