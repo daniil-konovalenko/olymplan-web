@@ -1,4 +1,71 @@
 extends ../layout
 
+block custom_head
+    link(rel="stylesheet",href="stylesheets/user.css")
+
 block content
-    h1 Привет, %username%!
+    div(class="pure-u-lg-1-4")
+    div(class="pure-u-lg-2-5")
+            
+        h1 Привет, %username%!
+        
+        table
+            tr
+                td(colspan="2")
+                    h3 Учетная запись
+            tr
+                td Почта
+                td
+                    input(type='text')
+            tr
+                td Пароль
+                td 
+                    input(type='password')  
+            tr      
+                td(colspan="2")
+                    h3 Личная информация
+            tr
+                td Пол
+                td
+                    select
+                        option(value='m') муж.
+                        option(value='f') жен.
+                        option(value='n') неопр.
+            tr
+                td Класс
+                td
+                    select
+                        option(value='5') 5
+                        option(value='6') 6
+                        option(value='7') 7
+                        option(value='8') 8
+                        option(value='9') 9
+                        option(value='10') 10
+                        option(value='11') 11
+            tr
+                td Как к тебе обращаться
+                td
+                    input(type='text')
+            tr
+                td Ник в Телеграме
+                td
+                    input(type="tel")
+            tr
+                td Цвет (for testing purpose only)
+                td
+                    input(type="color")
+        
+    div(class="pure-u-lg-1-4") 
+        div(class='user__subscription')
+            
+            p(class='text__wrapper')
+                | Вытесняющий импульс подавляет и вытесняет из сознания человека все 
+                | психические процессы, которые могут помешать полному отождествлению с
+                | клеткой орануса. Под действием вытесняющего импульса,
+                | блокирующего все тонкие психические процессы, не связанные прямо с
+                | движением денег, мир начинает восприниматься исключительно как воплощение
+                | орануса. Это приводит к устрашающему результату. Вот как описал свои
+                | видения один брокер с Лондонской биржи: <b><i>«Мир — это место, где бизнес
+                | встречает подписку»</i></b>.
+            
+                button(class="button__empty subscribe__settings") Оформить подписку

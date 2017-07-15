@@ -1,23 +1,27 @@
 doctype html
 html
     
-    include ./head.pug
+    head
+        include ./head.pug
+        block custom_head
     
     body
-        div(class="navbar__wrapper")
-            ul(class='pure-g')
-                li(class='navbar__logo pure-u-lg-1-4')
-                    a(href="/")
-                        img(src="/img/logo-1-1.svg")
-                li(class='navbar__link_uni pure-u-lg-1-4')
+        div(class="navbar__wrapper pure-g")
+            div(class='pure-u-lg-1-4')
+                a(href="/" class='navbar__logo')
+                    img(src="/img/logo-1-1.svg")
+                //li(class='navbar__logo')
+                        a(href="/")
+                            img(src="/img/logo-1-1.svg")
+            div(class='navbar__link_uni pure-u-lg-1-4')
                     a(href="/uni") Университеты ⌕
-                li(class='navbar__link_cont pure-u-lg-1-4')
+            div(class='navbar__link_cont pure-u-lg-1-4')
                     a(href="/contest") Олимпиады ⌕
-                if isUserLoggedIn
-                    li(class='navbar__userlink pure-u-lg-1-4')
+            if isUserLoggedIn
+                div(class='navbar__userlink pure-u-lg-1-4')
                         a(href="/user") lole
-                else
-                    li(class='navbar__userlink pure-u-lg-1-4')
+            else
+                div(class='navbar__userlink pure-u-lg-1-4')
                         a(href="/user") Войти 🚪
         
         block content
