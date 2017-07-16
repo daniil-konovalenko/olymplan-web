@@ -1,8 +1,55 @@
 extends layout
 
+block custom_head
+    link(rel="stylesheet",href="/stylesheets/landing.css")
+
 block content
-    div(class="main__landing__wrapper",style="background-image:url('/img/main_bg.jpg'); position:relative;top: -70px; height: 100vh; background-size: cover;")
-        h1(style="color:white;width:100%;text-align:center;padding-top:40vh") Здря
+    div(class="main-landing__wrapper")
+        div(class="pure-u-lg-3-5 main-landing__subwrapper")
+            img(src="/img/logo-1-transparent.svg")
+        div(class="pure-u-lg-2-5 main-landing__subwrapper")
+            div(class="main-landing__hello-msg")
+                h1 Орден Октябрьской Звезды
+                p
+                    | также известный под названием Орден Леннона или Знак 
+                    | постоянной готовности — высшая награда в марксизме-джедаизме. 
+                    | Был введён Владимиром Лёниным на втором Джедайском слёте. 
+    div(class="about-landing__wrapper")
+        div(class="pure-u-lg-1-4")
+            // offset
+        div(class="pure-u-lg-1-4")
+            h1 Орден Октябрьской Звезды
+            p
+                | также известный под названием Орден Леннона или Знак 
+                | постоянной готовности — высшая награда в марксизме-джедаизме. 
+                | Был введён Владимиром Лёниным на втором Джедайском слёте. 
+                | Первоначально им награждались только старые борщевики, видные
+                | борцы за дело революции, но когда власть захватил Сталин,
+                | практически всех старых борщевиков расстреляли, а ордена
+                | раздали детям. 
+        div(class="pure-u-lg-1-4")
+            img(src="/img/logo-1-1.svg")
+
+        div(class="about-landing__wrapper")
+            div(class="pure-u-lg-1-4")
+                // offset
+            div(class="pure-u-lg-1-4")
+                img(src="/img/logo-1-1.svg")
+            div(class="pure-u-lg-1-4")
+                h1 Орден Октябрьской Звезды
+                p
+                    | также известный под названием Орден Леннона или Знак 
+                    | постоянной готовности — высшая награда в марксизме-джедаизме. 
+                    | Был введён Владимиром Лёниным на втором Джедайском слёте. 
+                    | Первоначально им награждались только старые борщевики, видные
+                    | борцы за дело революции, но когда власть захватил Сталин,
+                    | практически всех старых борщевиков расстреляли, а ордена
+                    | раздали детям. 
         
-    h1= title
-    p Welcome to #{title} Keks
+        div(class="pure-u-lg-1-4")
+            // offset
+        div(class="pure-u-lg-1-2")
+            hr
+        
+        h1= title
+        p Welcome to #{title} Keks
