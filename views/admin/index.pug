@@ -1,15 +1,35 @@
 extends admin_layout
 
 block content
+    //p= JSON.stringify(unis[0])
+    //p= JSON.stringify(Object.keys(unis[0].dataValues))
+    //p= console.log(unis[0])
+    
+    style
+        | tr:nth-of-type(odd) {
+        |     background-color: #eee;
+        | }
+        | table {
+        |     width: 100%;
+        | }
+    
+    script
+        | 
+        | 
+    
+    - var uni_fields = Object.keys(unis[0].dataValues)
+    - uni_fields = uni_fields.slice(0, uni_fields.length - 2)
+    
+    
     table
         tr
-            each field in unis[0]
+            each field in uni_fields
                 td= field
         each record in unis
             tr
-                each field in unis[0]
-                    td= record[field]
-    table
+                each field in uni_fields
+                    td(contenteditable="true")= record[field]
+    //table
         tr
             each field in facs[0]
                 td= field
