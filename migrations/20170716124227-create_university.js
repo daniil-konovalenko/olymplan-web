@@ -2,13 +2,35 @@
 
 module.exports = {
     up: function (queryInterface, Sequelize) {
-        /*
-         Add altering commands here.
-         Return a promise to correctly handle asynchronicity.
-
-         Example:
-         return queryInterface.createTable('users', { id: Sequelize.INTEGER });
-         */
+        return queryInterface.createTable('Universities', {
+            id: {
+                allowNull: false,
+                autoIncrement: true,
+                primaryKey: true,
+                type: Sequelize.INTEGER,
+            },
+            name: {
+                type: Sequelize.STRING,
+            },
+            name_abbreviation_rus: {
+                type: Sequelize.STRING,
+            },
+            name_abbreviation_eng: {
+                type: Sequelize.STRING,
+            },
+            full_name: {
+                type: Sequelize.STRING,
+            },
+            is_sharaga: {
+                type: Sequelize.BOOLEAN,
+            },
+            description: {
+                type: Sequelize.TEXT
+            },
+            external_url: {
+                type: Sequelize.STRING,
+            },
+        });
     },
 
     down: function (queryInterface, Sequelize) {
