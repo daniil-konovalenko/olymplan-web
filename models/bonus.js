@@ -1,19 +1,19 @@
 'use strict';
 
-module.exports = function(sequelize, DataTypes) {
+module.exports = function (sequelize, DataTypes) {
     var Bonus = sequelize.define('Bonus', {
         diploma_level: {
-            DataTypes.INTEGER;
+            type: DataTypes.INTEGER,
         },
         subject: {
-            DataTypes.STRING;
+            type: DataTypes.STRING,
         },
         bonus_type: {
-            DataTypes.STRING;
+            type: DataTypes.STRING,
         },
     }, {
         classMethods: {
-            associate: function(models) {
+            associate: function (models) {
                 Bonus.belongsTo(models.Contest);
                 Bonus.hasOne(models.EduProgram);
             },

@@ -3,22 +3,22 @@
 module.exports = function(sequelize, DataTypes) {
     var UserInfo = sequelize.define('UserInfo', {
         sex: {
-            DataTypes.STRING,
+            type: DataTypes.STRING,
         },
         grade: {
-            DataTypes.INTEGER,
+            type: DataTypes.INTEGER,
         },
         name: {
-            DataTypes.STRING,
+            type: DataTypes.STRING,
         },
-        whatsup_nick: {
-            DataTypes.STRING,
+        whatsapp_nick: {
+            type: DataTypes.STRING,
         },
         viber_nick: {
-            DataTypes.STRING,
+            type: DataTypes.STRING,
         },
         telegram_nick: {
-            DataTypes.STRING,
+            type: DataTypes.STRING,
         },
         timestamp: false,
     }, {

@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function(sequelize, DataTypes) {
+module.exports = function (sequelize, DataTypes) {
     var Contest = sequelize.define('Contest', {
         name: DataTypes.STRING,
         level: DataTypes.INTEGER,
@@ -10,7 +10,7 @@ module.exports = function(sequelize, DataTypes) {
         stages: DataTypes.ARRAY(DataTypes.STRING),
     }, {
         classMethods: {
-            associate: function(models) {
+            associate: function (models) {
                 Contest.belongsToMany(models.Stage, {
                     through: 'ContestStages',
                 });

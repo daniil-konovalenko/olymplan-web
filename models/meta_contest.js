@@ -1,23 +1,23 @@
 'use strict';
 
-module.exports = function(sequelize, DataTypes) {
+module.exports = function (sequelize, DataTypes) {
     var MetaContest = sequelize.define('MetaContest', {
         name: {
-            DataTypes.STRING,
+            type: DataTypes.STRING,
             unique: true,
-            allow Null: false
+            allowNull: false,
         },
         external_url: {
-            DataTypes.STRING(length = 1000),
+            type: DataTypes.STRING(length = 1000),
             isUrl: true,
         },
         description: {
-            DataTypes.TEXT,
+            type: DataTypes.TEXT,
         },
         timestamp: false,
     }, {
         classMethods: {
-            associate: function(models) {
+            associate: function (models) {
                 metaContest.hasOne(models.Contest);
             },
         },
