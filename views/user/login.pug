@@ -1,8 +1,12 @@
 extends ../layout
 
 block content
-    form
+    script(src="https://code.jquery.com/jquery-3.2.1.min.js")
+    script(src="/js/user_login.js")
+    
+    // FIXME: add AJAX
+    form(action="",method="post")
         h1(class="login__header") Вход
-        input(type="input",placeholder="логин")
-        input(type="password",placeholder="пароль")
-        input(type="submit",value="Войти")
+        input(type="text",placeholder="логин",name="login")
+        input(type="password",placeholder="пароль",name="password")
+        input(class="button__filled",type="submit",value="Войти")
