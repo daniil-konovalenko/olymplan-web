@@ -10,13 +10,13 @@ module.exports = {
                 type: Sequelize.INTEGER
             },
             diploma_level:{
-                type: Sequelize.Integer,
+                type: Sequelize.INTEGER,
             },
             subject:{
-                type: Sequelize.String,
+                type: Sequelize.STRING,
             },
             bonus_type: {
-                type: Sequelize.String
+                type: Sequelize.STRING
             },
             ContestId: {
                 type: Sequelize.INTEGER,
