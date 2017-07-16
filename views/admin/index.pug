@@ -4,34 +4,20 @@ block content
     - var uni_fields = Object.keys(unis[0].dataValues)
     - uni_fields = uni_fields.slice(0, uni_fields.length - 2)
     
+    script var fields = JSON.parse("#{uni_fields.toString()}");
+    
     div(class="admin__wrapper")
         each record in unis
             div(class="elem__wrapper")
                 div(class="elem__header")
                     h3= record.id + ": " + record.name
                 div(class="elem__body _is_hidden")
-                    table(class="table")
-                        tr
-                            each field in uni_fields
-                                th= field
-                        tr
-                            each field in uni_fields
-                                td(contenteditable="true")= record[field]
-                        
-    //table(class="table table-striped")
-        tr
-            each field in uni_fields
-                th= field
-        each record in unis
-            tr
-                each field in uni_fields
-                    td(contenteditable="true")= record[field]
-    //table
-        tr
-            each field in facs[0]
-                td= field
-        each record in facs
-            tr
-                each field in facs[0]
-                    td= record[field]
-                                   
+                    div(class="elem__body__list")
+                        each field in uni_fields
+                            table(class="elem__body__listelem")
+                                tr
+                                    td
+                                        b= field
+                                tr
+                                    td(class="-value-" + record.id + '-' + field,contenteditable="true")= record[field]
+                        button(class="button__submit btn btn-success",id=record.id) Сохранить
