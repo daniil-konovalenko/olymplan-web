@@ -5,7 +5,7 @@ module.exports = function (sequelize, DataTypes) {
         places: DataTypes.ARRAY(DataTypes.STRING),
         date: DataTypes.DATE,
         is_intramural: DataTypes.BOOLEAN,
-        startTime: DataTypes.DATE,
+        start_time: DataTypes.DATE,
         duration: DataTypes.TIME,
         deadline: DataTypes.DATE,
         notes: DataTypes.TEXT,
