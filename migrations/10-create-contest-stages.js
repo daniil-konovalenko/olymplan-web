@@ -3,27 +3,26 @@
 module.exports = {
     up: function (queryInterface, Sequelize) {
         return queryInterface.createTable('ContestStages', {
-            id: {
-                allowNull: false,
-                autoIncrement: true,
-                primaryKey: true,
-                type: Sequelize.INTEGER,
-            },
+
             StageId: {
                 type: Sequelize.INTEGER,
                 onDelete: "CASCADE",
-                allowNull: true,
+                onUpdate: "CASCADE",
+                allowNull: false,
+                primaryKey: true,
                 references: {
-                    model: 'Stage',
+                    model: 'Stages',
                     key: 'id'
                 }
             },
             ContestId: {
                 type: Sequelize.INTEGER,
                 onDelete: "CASCADE",
-                allowNull: true,
+                onUpdate: "CASCADE",
+                allowNull: false,
+                primaryKey: true,
                 references: {
-                    model: 'Contest',
+                    model: 'Contests',
                     key: 'id'
                 }
             },

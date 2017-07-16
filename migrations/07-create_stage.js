@@ -32,10 +32,12 @@ module.exports = {
             },
             StageId: {
                 type: Sequelize.INTEGER,
-                onDelete: "CASCADE",
+                onDelete: "SET NULL",
+                onUpdate: "CASCADE",
                 allowNull: true,
+
                 references: {
-                    model: 'Stage',
+                    model: 'Stages',
                     key: 'id'
                 }
             },

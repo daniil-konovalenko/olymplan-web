@@ -11,6 +11,8 @@ module.exports = {
             },
             name: {
                 type: Sequelize.STRING,
+                allowNull: false,
+                unique: true,
             },
             external_url: {
                 type: Sequelize.STRING(750),

@@ -22,7 +22,7 @@ module.exports = {
                 type: Sequelize.STRING,
             },
             has_subscription: {
-                type: DataTypes.BOOLEAN,
+                type: Sequelize.BOOLEAN,
                 defaultValue: false,
             },
         });
