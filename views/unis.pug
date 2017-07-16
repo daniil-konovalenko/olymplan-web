@@ -1,19 +1,30 @@
 extends layout
 
 block content
-
-    table
-        tr
-            th Название
-            th Шарага?
-            th Описание
-            th Факультеты
-
-        each record in unis
+    style 
+        | table {width: 100%;}
+        | tr:nth-of-type(odd) {background-color: #eee;}
+        | tr:hover {font-weight: bold;}
+    
+    div(class="pure-u-lg-1-4")
+    div(class="pure-u-lg-1-2")
+        table
             tr
-                td= record.name
-                td= record.is_sharaga ? 'да' : 'нет'
-                td= record.description
-                td
-                    each fac in record.Faculties
-                        a(href=fac.external_url)= fac.name + ", "
+                th 
+                    h3 Название
+                th 
+                    h3 Шарага?
+                th 
+                    h3 Описание
+                th 
+                    h3 Факультеты
+
+            each record in unis
+                tr
+                    td= record.name
+                    td= record.is_sharaga ? 'да' : 'нет'
+                    td= record.description
+                    td
+                        each fac in record.Faculties
+                            a(href=fac.external_url)= fac.name + ", "
+                            

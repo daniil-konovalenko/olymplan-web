@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = function (sequelize, DataTypes) {
-    var Faculty = sequelize.define('Faculty', {
+    var EduProgram = sequelize.define('EduProgram', {
         name: DataTypes.STRING,
         external_url: DataTypes.STRING(750),
         description: DataTypes.TEXT,
@@ -9,12 +9,10 @@ module.exports = function (sequelize, DataTypes) {
         timestamps: false,
         classMethods: {
             associate: function (models) {
-                Faculty.belongsTo(models.University);
-                Faculty.hasMany(models.EduProgram);
+                EduProgram.belongsTo(models.Faculty);
+                EduProgram.hasMany(models.Bonus);
             },
         },
     });
-
-
-    return Faculty;
+    return EduProgram;
 };
