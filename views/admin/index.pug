@@ -1,31 +1,14 @@
 extends admin_layout
 
 block content
-    //p= JSON.stringify(unis[0])
-    //p= JSON.stringify(Object.keys(unis[0].dataValues))
-    //p= console.log(unis[0])
-    
-    //style
-        | tr:nth-of-type(odd) {
-        |     background-color: #eee;
-        | }
-        | table {
-        |     width: 100%;
-        | }
-    
-    script
-        | 
-        | 
-    
     - var uni_fields = Object.keys(unis[0].dataValues)
     - uni_fields = uni_fields.slice(0, uni_fields.length - 2)
-    
     
     div(class="admin__wrapper")
         each record in unis
             div(class="elem__wrapper")
                 div(class="elem__header")
-                    h2= record.name
+                    h3= record.id + ": " + record.name
                 div(class="elem__body _is_hidden")
                     table(class="table")
                         tr
