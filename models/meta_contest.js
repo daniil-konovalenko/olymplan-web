@@ -14,8 +14,8 @@ module.exports = function (sequelize, DataTypes) {
         description: {
             type: DataTypes.TEXT,
         },
-        timestamp: false,
     }, {
+        timestamp: false,
         classMethods: {
             associate: function (models) {
                 metaContest.hasOne(models.Contest);

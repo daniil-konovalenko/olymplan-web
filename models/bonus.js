@@ -12,6 +12,7 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.STRING,
         },
     }, {
+        timestamp: false,
         classMethods: {
             associate: function (models) {
                 Bonus.belongsTo(models.Contest);

@@ -6,6 +6,7 @@ module.exports = function (sequelize, DataTypes) {
         external_url: DataTypes.STRING,
         description: DataTypes.TEXT,
     }, {
+        timestamp: false,
         classMethods: {
             associate: function (models) {
                 EduProgram.belongsTo(models.Faculty);

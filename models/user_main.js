@@ -20,9 +20,8 @@ module.exports = function (sequelize, DataTypes) {
         user_type: {
             type: DataTypes.STRING,
         },
-        timestamp: false,
-
     }, {
+        timestamp: false,
         classMethods: {
             associate: function (models) {
                 UserMain.hasOne(models.UserInfo);

@@ -11,6 +11,7 @@ module.exports = function (sequelize, DataTypes) {
         notes: DataTypes.TEXT,
 
     }, {
+        timestamp: false,
         classMethods: {
             associate: function (models) {
                 Stage.hasMany(models.Stage, {as: 'requiredStages'});

@@ -9,6 +9,7 @@ module.exports = function (sequelize, DataTypes) {
         year: DataTypes.INTEGER, // educational year start
         stages: DataTypes.ARRAY(DataTypes.STRING),
     }, {
+        timestamp: false,
         classMethods: {
             associate: function (models) {
                 Contest.belongsToMany(models.Stage, {
