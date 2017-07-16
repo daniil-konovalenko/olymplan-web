@@ -12,10 +12,11 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.STRING,
         },
     }, {
+        timestamps: false,
         classMethods: {
             associate: function (models) {
                 Bonus.belongsTo(models.Contest);
-                Bonus.hasOne(models.EduProgram);
+                Bonus.belongsTo(models.EduProgram);
             },
         },
     });

@@ -8,17 +8,17 @@ module.exports = function (sequelize, DataTypes) {
             allowNull: false,
         },
         external_url: {
-            type: DataTypes.STRING(length = 1000),
+            type: DataTypes.STRING(750),
             isUrl: true,
         },
         description: {
             type: DataTypes.TEXT,
         },
-        timestamp: false,
     }, {
+        timestamps: false,
         classMethods: {
             associate: function (models) {
-                metaContest.hasOne(models.Contest);
+                MetaContest.hasOne(models.Contest);
             },
         },
     });

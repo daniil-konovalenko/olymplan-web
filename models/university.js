@@ -10,6 +10,7 @@ module.exports = function (sequelize, DataTypes) {
         description: DataTypes.TEXT,
         external_url: DataTypes.STRING,
     }, {
+        timestamps: false,
         classMethods: {
             associate: function (models) {
                 University.hasMany(models.Faculty);

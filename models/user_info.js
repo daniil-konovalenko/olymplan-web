@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function(sequelize, DataTypes) {
+module.exports = function (sequelize, DataTypes) {
     var UserInfo = sequelize.define('UserInfo', {
         sex: {
             type: DataTypes.STRING,
@@ -20,11 +20,10 @@ module.exports = function(sequelize, DataTypes) {
         telegram_nick: {
             type: DataTypes.STRING,
         },
-        timestamp: false,
     }, {
+        timestamps: false,
         classMethods: {
-            associate: function(models) {
-                UserInfo.hasOne(User.Main);
+            associate: function (models) {
             },
         },
     });
