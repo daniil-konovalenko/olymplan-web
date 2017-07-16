@@ -9,8 +9,11 @@ module.exports = function (sequelize, DataTypes) {
             classMethods: {
                 associate: function (models) {
                     Faculty.belongsTo(models.University);
+                    Faculty.hasMany(models.EduProgram);
                 },
             },
         });
+
+
     return Faculty;
 };
