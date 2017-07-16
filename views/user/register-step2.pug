@@ -1,14 +1,44 @@
 extends ../layout
 
 block custom_head
-    link(rel="stylesheet",href="stylesheets/register.css")
+    link(rel="stylesheet",href="/stylesheets/register.css")
 
 block content
-    div(class="pure-u-lg-2-5")
-    div(class="pure-u-lg-1-5")
+    div(class="leftfield__message pure-u-lg-2-5")
+    div(class="pure-u-lg-1-5 register__wrapper")
         form(method="post",action="",class="register__form")
-            h1 Регистрация
-            input(type="text",placeholder="почта")
-            input(type="password",placeholder="пароль первый раз")
-            input(type="password",placeholder="пароль второй раз")
-            input(type="submit",class="button__filled",value="Зарегистрироваться")
+            h3 Регистрация
+            input(type="password",placeholder="пароль",class="pure-u-lg-1 field__password")
+            div(class='button__radio')
+                input(type="radio",name="status",value='Ученик')
+                input(type="radio",name="status",value='Родитель')
+                input(type="radio",name="status",value='Учитель')
+            table
+                tr
+                    td Класс
+                    td
+                        select
+                            option(value='5') 5
+                            option(value='6') 6
+                            option(value='7') 7
+                            option(value='8') 8
+                            option(value='9') 9
+                            option(value='10') 10
+                            option(value='11') 11
+                tr
+                    td Пол
+                    td
+                        select
+                            option(value='m') муж.
+                            option(value='f') жен.
+                            option(value='n') неопр.
+                tr
+                    td Как к тебе обращаться
+                    td
+                        input(type='text')
+                tr
+                    td Ник в Телеграме
+                    td
+                        input(type="tel")
+            input(type="submit",class="button__empty pure-u-lg-1 send__button",value="Зарегистрироваться")
+            
