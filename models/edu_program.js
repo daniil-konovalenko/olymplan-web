@@ -3,7 +3,7 @@
 module.exports = function (sequelize, DataTypes) {
     var EduProgram = sequelize.define('EduProgram', {
         name: DataTypes.STRING,
-        external_url: DataTypes.STRING,
+        external_url: DataTypes.STRING(750),
         description: DataTypes.TEXT,
     }, {
         timestamps: false,

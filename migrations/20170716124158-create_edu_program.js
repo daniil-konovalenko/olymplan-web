@@ -13,7 +13,7 @@ module.exports = {
                 type: Sequelize.STRING,
             },
             external_url: {
-                type: Sequelize.STRING,
+                type: Sequelize.STRING(750),
             },
             description: {
                 type: Sequelize.TEXT
