@@ -14,6 +14,7 @@ module.exports = function(sequelize, DataTypes) {
                 Contest.belongsToMany(models.Stage, {
                     through: 'ContestStages',
                 });
+                Contest.hasMany(models.Bonus);
             },
         },
     });

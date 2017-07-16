@@ -2,9 +2,15 @@
 
 module.exports = function(sequelize, DataTypes) {
     var Bonus = sequelize.define('Bonus', {
-        diploma_level: DataTypes.INTEGER;
-        subject: DataTypes.STRING;
-        bonus_type: DataTypes.JSON;
+        diploma_level: {
+            DataTypes.INTEGER;
+        },
+        subject: {
+            DataTypes.STRING;
+        },
+        bonus_type: {
+            DataTypes.STRING;
+        },
     }, {
         classMethods: {
             associate: function(models) {
