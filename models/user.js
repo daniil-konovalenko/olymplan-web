@@ -14,6 +14,10 @@ module.exports = function (sequelize, DataTypes) {
         user_type: {
             type: DataTypes.STRING,
         },
+        has_subscription: {
+            type: DataTypes.BOOLEAN,
+            defaultValue: 0,
+        }
     }, {
         timestamps: false,
         classMethods: {
