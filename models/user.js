@@ -16,7 +16,7 @@ module.exports = function (sequelize, DataTypes) {
         },
         has_subscription: {
             type: DataTypes.BOOLEAN,
-            defaultValue: 0,
+            defaultValue: false,
         }
     }, {
         timestamps: false,

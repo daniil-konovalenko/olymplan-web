@@ -7,7 +7,6 @@ module.exports = function (sequelize, DataTypes) {
         subject: DataTypes.STRING,
         grades: DataTypes.ARRAY(DataTypes.INTEGER),
         year: DataTypes.INTEGER, // educational year start
-        stages: DataTypes.ARRAY(DataTypes.STRING),
     }, {
         timestamps: false,
         classMethods: {
