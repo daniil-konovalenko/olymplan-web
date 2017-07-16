@@ -1,23 +1,44 @@
 'use strict';
 
 module.exports = {
-  up: function (queryInterface, Sequelize) {
-    /*
-      Add altering commands here.
-      Return a promise to correctly handle asynchronicity.
+    up: function (queryInterface, Sequelize) {
+        return queryInterface.createTable('ContestStages', {
+            id: {
+                allowNull: false,
+                autoIncrement: true,
+                primaryKey: true,
+                type: Sequelize.INTEGER,
+            },
+            StageId: {
+                type: Sequelize.INTEGER,
+                onDelete: "CASCADE",
+                allowNull: true,
+                references: {
+                    model: 'Stage',
+                    key: 'id'
+                }
+            },
+            ContestId: {
+                type: Sequelize.INTEGER,
+                onDelete: "CASCADE",
+                allowNull: true,
+                references: {
+                    model: 'Contest',
+                    key: 'id'
+                }
+            },
+            createdAt: {
+                allowNull: false,
+                type: Sequelize.DATE
+            },
+            updatedAt: {
+                allowNull: false,
+                type: Sequelize.DATE
+            },
+        });
+    },
 
-      Example:
-      return queryInterface.createTable('users', { id: Sequelize.INTEGER });
-    */
-  },
-
-  down: function (queryInterface, Sequelize) {
-    /*
-      Add reverting commands here.
-      Return a promise to correctly handle asynchronicity.
-
-      Example:
-      return queryInterface.dropTable('users');
-    */
-  }
+    down: function (queryInterface, Sequelize) {
+         return queryInterface.dropTable('ContestStages');
+    }
 };
