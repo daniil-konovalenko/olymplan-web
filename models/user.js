@@ -1,15 +1,9 @@
 'use strict';
 
 module.exports = function (sequelize, DataTypes) {
-    var UserMain = sequelize.define('UserMain', {
+    var User = sequelize.define('User', {
         email: {
             type: DataTypes.STRING,
-            validate: {
-                isEmail: {
-                    args: true,
-                    msg: "Please, enter correct email address",
-                },
-            },
         },
         password_hash: {
             type: DataTypes.STRING,
@@ -24,9 +18,9 @@ module.exports = function (sequelize, DataTypes) {
         timestamps: false,
         classMethods: {
             associate: function (models) {
-                UserMain.hasOne(models.UserInfo);
+                User.hasOne(models.UserInfo);
             },
         },
     });
-    return UserMain;
+    return User;
 };
