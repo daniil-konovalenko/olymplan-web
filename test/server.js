@@ -32,21 +32,7 @@ describe('loading express', function () {
             .get('/uni')
             .expect(200, done);
     });
-    it('responds to /uni/:random uni', function testRoot(done){
-        request(app)
-            .get('/uni/some')
-            .expect(200, done);
-    });
-    it('responds to /uni/:random uni/: randomm faculy', function testRoot(done){
-        request(app)
-            .get('/uni/some/some')
-            .expect(200, done);
-    });
-    it('responds to /uni/user', function testRoot(done){
-        request(app)
-            .get('/uni/user')
-            .expect(200, done);
-    });
+
     it('404 some random page', function testRandomPage(done){
         request(app)
             .get('/whatever')
