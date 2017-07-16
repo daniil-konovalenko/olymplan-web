@@ -30,18 +30,18 @@ body
 
     h1
         font-family: $font-h
-        font-size: 28px
+        font-size: 38px
 
     h2
         font-family: $font-h
-        font-size: 24px
+        font-size: 32px
 
     h3
         font-family: $font-h
-        font-size: 20px
+        font-size: 26px
 
     p
-        font-size: 16px
+        font-size: 20px
         margin: 0
 
     ul,ol
@@ -50,14 +50,14 @@ body
     .button__empty
         border: $box-border-color solid 2px
         border-radius: 5px
-        padding: 5px 15px 5px 15px
+        padding: 5px 7px 5px 7px
         background-color: white
         font-size: 16px
         font-family: $font-main
-        margin: 1em
         color: #2b2b2b
         cursor: pointer
         font-weight: bold
+        text-align: center
 
     .button__empty:hover
         background-color: #C7D3FF
@@ -69,14 +69,14 @@ body
     .button__filled
         border: $box-border-color solid 2px
         border-radius: 5px
-        padding: 5px 15px 5px 15px
+        padding: 5px 7px 5px 7px
         background-color: $box-fill-color
         font-size: 16px
         font-family: $font-main
-        margin: 1em
         color: #2b2b2b
         cursor: pointer
         font-weight: bold
+        text-align: center
 
     .button__filled:hover
         background-color: #7c97cc
@@ -89,14 +89,14 @@ body
         border: white solid 2px
         background-color: $infobox-color
         border-radius: 5px
-        padding: 0.5em 2em 0.5em 2em
+        padding: 0.5em 0 0.5em 0
         font-weight: bold
         text-align: center
 
     .message_box
         border: $messagebox-color solid 2px
         border-radius: 5px
-        padding: 0.5em 2em 0.5em 2em
+        padding: 0.5em 0 0.5em 0
         font-weight: bold
         text-align: center
 
@@ -109,7 +109,7 @@ body
 
     input[type=text],input[type=password],input[type=tel],input[type=number]
         box-sizing: border-box
-        background-color: #e3e3e3
+        background-color: $input-text-bg-color
         border: 2px solid white
         border-radius: 5px
         padding: 7px
@@ -118,7 +118,25 @@ body
         font-size: 16px
 
     input[type=text]:hover,input[type=password]:hover,input[type=text]:hover,input[type=password]:hover,input[type=tel]:hover,input[type=number]:hover
-        background-color: #f0f0f0
+        background-color: $input-text-hover-color
 
     input[type=text]:focus,input[type=password]:focus,input[type=text]:focus,input[type=password]:focus,input[type=tel]:focus,input[type=number]:focus
+        border: 2px solid $input-text-bg-color
+        background-color: white
+
+    .input__is__false
+        background-color: #f97272
+        box-sizing: border-box
+        border: 2px solid red
+        border-radius: 5px
+        padding: 7px
+        margin: 0px
+        outline: none
+        font-size: 16px
+
+    .input__is__false:hover
+        background-color: #ff7b7b
+
+    .input__is__false:focus
+        border: 2px solid $input-text-bg-color
         background-color: white
